@@ -18,14 +18,14 @@ git clone https://github.com/bottleworks/RaspiWiFi.git
 cd RaspiWiFi
 sudo sh start.sh
 
-== This script will install all necessary prerequisites, copy configuration files, and reboot. When it finishes booting it should present itself in "Configuration Mode" as a WiFi access point with the name "RaspiWiFi Setup".
+== This script will install all necessary prerequisites, copy configuration files, and reboot. When it finishes booting it should present itself in "Configuration Mode" as a WiFi access point with the name "NameOfNetwork".  
 
 
 
 
 USAGE:
 
-== Connect to the "RaspiWiFi Setup" access point using any other WiFi enabled device.  The default password is "password12345".  
+== Connect to the "NameOfNetwork" access point using any other WiFi enabled device.  The default password is "password12345".  
 You can modify the SSID and password at /usr/share/configure_wifi/Reset_Device/static_files/hostapd.conf
 
 == If you run a non-stock /etc/rc.local, modify rc.local.apclient and rc.local.apclient.template /usr/share/configure_wifi/Reset_Device/static_files/
@@ -36,7 +36,7 @@ If you happen to operate a service which needs port 80, such as the Apache Web S
 su -c "cd /usr/share/configure_wifi/Configuration_App/ && rails s -b 10.0.0.1 -e production -p 80 -d" &
 An example is provided.
 
-== Navigate to http://10.0.0.1 using any web browser on the device you connected with.  It take several minutes before the server is ready to accept requests.  If you're connected to the Pi via wifi, it gave you an IP, but the web page is timing out, then just wait a couple minutes....
+== Navigate to http://10.0.0.1 using any web browser on the device you connected with.  It takes several minutes before the server is ready to accept requests.  If you're connected to the Pi via wifi and it gave you an IP, but the web page is timing out, then just wait a couple minutes....
 
 == Select the WiFi connection you'd like your Raspberry Pi to connect to from the drop down list and enter its wireless password on the page provided. If no encryption is enabled, leave the password box blank.
 
